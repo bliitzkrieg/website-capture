@@ -11,7 +11,7 @@ app.get('/', async (req, res) => {
     const binary = await target[0].screenshot();
     await browser.close();
 
-    res.writeHead(200, {'Content-Type': 'image/png' });
+    res.writeHead(200, {'Content-Type': 'image/png'});
     res.end(binary, 'binary');
 });
 
